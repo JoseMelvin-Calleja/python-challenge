@@ -46,15 +46,13 @@ with open(csvpath) as csvfile:
             winner = candidates[i]
             break
     
-
-
-
-
 # Creating Analysis Text File
 csvpath2 = os.path.join('analysis', 'analysis.txt')
 
 with open(csvpath2, 'w') as txtfile:
     txtfile.write('Election Results\n')
+    txtfile.write('----------------------------\n')
+    txtfile.write(f'Total Votes: {total} \n')
     txtfile.write('----------------------------\n')
     for i in range(len(candidates)):
         txtfile.write(f'{candidates[i]}: {votes_percentage[i]}% ({votes_recieved[i]})\n')
