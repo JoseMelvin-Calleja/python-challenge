@@ -45,6 +45,17 @@ with open(csvpath) as csvfile:
         if votes_percentage[i] > 50:
             winner = candidates[i]
             break
+
+# Printing analysis in terminal 
+print('Election Results')
+print('----------------------------')
+print(f'Total Votes: {total}')
+print('----------------------------')
+for i in range(len(candidates)):
+    print(f'{candidates[i]}: {votes_percentage[i]}% ({votes_recieved[i]})')
+print('----------------------------')
+print(f'Winner: {winner}')
+print('----------------------------')
     
 # Creating Analysis Text File
 csvpath2 = os.path.join('analysis', 'analysis.txt')

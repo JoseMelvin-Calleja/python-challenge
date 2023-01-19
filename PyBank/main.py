@@ -47,6 +47,15 @@ with open(csvpath) as csvfile:
             decrease = difference[i]
             decrease_month = i + 1
 
+# Printing analysis in terminal 
+print('Financial Analysis')
+print('----------------------------')
+print(f'Total Months: {months}')
+print(f'Total: ${net}')
+print(f'Average Change: ${avg}')
+print(f'Greatest Increase in Profits: {dates[increase_month]} (${increase})')
+print(f'Greatest Decrease in Profits: {dates[decrease_month]} (${decrease})')
+
 # Creating Analysis Text File
 csvpath2 = os.path.join('analysis', 'analysis.txt')
 
